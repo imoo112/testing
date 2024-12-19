@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semakan Kelas Akademik Tahun Terkini 2025/2026 skjk2</title>
+    <style>
+        body {
+            background-image: url('BG_semak3.jpg'); /* Gantikan dengan laluan gambar anda */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input[type="text"], input[type="button"] {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            width: 80%;
+        }
+        input[type="button"] {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #218838;
+        }
+        #keputusan {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            border: 1px solid white;
+            display: none; /* Mula-mula tidak tunjukkan */
+        }
+    </style>
+    <script>
+        function semakKelas() {
+            var nama = document.getElementById("nama").value.trim(); // Trim untuk menghapus ruang kosong
+            var keputusan;
+
+            // Logik untuk mendapatkan keputusan kelas berdasarkan nama 
+            var kelas = {
+                "Hayyan Hanania": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Ahmad Hanief": "6",
+                "Adam Rayyan": "6",
+                "Afifi Putri": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Airin Fatihah": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Airis Amani": "6",
+                "Aisya Arisya": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Akhtar Aisy": "6",
+                "Ahmad Alaik": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Al-Khawarizmi": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Ammar Hariz": "6",
+                "Amni Sofia": "6",
+                "Annur Khairah": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Nurul Arbayah": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Muhammad Azzaieem": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Dhiya Raisya": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Eryna izzayani": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Muhammad Faris Hakimi": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Aisyah Kaisara": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Muhammad Ali Thaqif": "6",
+                "Wan Nurfiruz Eryna": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Wan Muhammad Nawfal": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Muhammad Qais": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Raisya Zulaikha": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Ummi Natasya": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Wan Firas Arsyad": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Quzhier Iman Al Imran": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!", 
+                "Alzam Hafiy": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Aqil Zikry": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                "Wan Nur Izzah": "Tahniah! Anda telah menerima kelas yang tinggi pada tahun akhir ini, selamat maju jaya!",
+                
+            
+            };
+
+            // Semak nama dalam objek kelas
+            if (kelas[nama]) {
+                keputusan = kelas[nama];
+            } else {
+                keputusan = "NAMA TIADA DI PANGKALAN DATA! pastikan nama tidak sampai bin dan huruf awal nama huruf besar";
+            }
+
+            // Papar keputusan
+            document.getElementById("keputusan").innerHTML = "Nama: " + nama + "<br>Keputusan: " + keputusan;
+            document.getElementById("keputusan").style.display = "block"; // Tunjukkan keputusan
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Semakan Kelas Akademik Tahun Terkini 2025/2026 skjk2</h1>
+    <input type="text" id="nama" placeholder="NAMA PENUH TIDAK SAMPAI BIN">
+    <input type="button" value="Semak Kelas" onclick="semakKelas()">
+    <div id="keputusan" style="margin-top: 20px;"></div>
+</div>
+
+</body>
+</html> 
